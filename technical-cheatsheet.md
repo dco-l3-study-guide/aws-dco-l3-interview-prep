@@ -71,6 +71,7 @@ Translates human-readable domain names into numerical IP addresses. Key diagnost
                │    [ HDD / SATA SSD ]             [ NVMe SSDs ]        │
                │    (SAS/SATA Bus)                 (PCIe High-Speed)    │
                └────────────────────────────────────────────────────────┘
+```
 
 #### Memory (RAM / DIMMs)
 * **ECC Memory (Error-Correcting Code):** Standard in enterprise servers. Detects and corrects single-bit memory errors on the fly to prevent kernel panics and data corruption.
