@@ -1,4 +1,4 @@
-# AWS DCO L3 — Technical Deep-Dive & Hardware Cheat Sheet
+# AWS DCO — Technical Deep-Dive & Hardware Cheat Sheet
 
 > **Scope Note:** This technical guide covers fundamental Data Center Operations concepts across server hardware, physical Layer 1 infrastructure, fiber optics, basic networking, and Linux CLI diagnostic utilities.
 
