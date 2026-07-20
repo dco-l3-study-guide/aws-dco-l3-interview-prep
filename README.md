@@ -1,10 +1,10 @@
-# AWS Data Center Operations (DCO) L3 — Complete Interview Study Guide
+# AWS Data Center Operations (DCO) — Complete Interview Study Guide
 
 ![Focus: AWS DCO L3](https://img.shields.io/badge/Focus-AWS%20DCO%20L3-orange.svg)
 ![Type: Public Study Guide](https://img.shields.io/badge/Type-Community%20Prep-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Welcome to the **AWS Data Center Operations (DCO) L3 Interview Preparation Guide**. This repository is a structured, community-focused study hub designed for candidates preparing for the AWS Data Center Technician (L3) interview loop.
+Welcome to the **AWS Data Center Operations (DCO) Interview Preparation Guide**. This repository is a structured, community-focused study hub designed for candidates preparing for the AWS Data Center Technician interview loop.
 
 > **⚠️ Legal Disclaimer & Compliance:** > This repository contains **strictly publicly available knowledge**, community prep experiences, and general data center engineering concepts. It does **NOT** contain any proprietary Amazon/AWS information, internal system details, confidential runbooks, or actual NDA-protected interview questions. Use this repository strictly as an educational study aid.
 
@@ -12,7 +12,7 @@ Welcome to the **AWS Data Center Operations (DCO) L3 Interview Preparation Guide
 
 ## 📌 Guide Overview
 
-The AWS DCO L3 interview evaluation is typically divided into two core areas:
+The AWS DCO interview evaluation is typically divided into two core areas:
 * **Behavioral & Leadership Principles (~70–80%):** Evaluates culture fit, safety prioritization, customer focus, operational maturity, and STAR storytelling.
 * **Technical Concepts & Logical Troubleshooting (~20–30%):** Evaluates server architecture, hardware isolation, fiber optics, networking layers (L1–L3), and structured problem-solving under pressure.
 
