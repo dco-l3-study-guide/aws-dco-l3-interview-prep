@@ -22,7 +22,7 @@ The AWS DCO interview evaluation is typically divided into two core areas:
 
 Click any module below to dive deep into specific study materials:
 
-### 🧠 1. [Leadership Principles & STAR Story Framework](docs/leadership-principles.md)
+### 🧠 1. [Leadership Principles & STAR Story Framework](leadership-principles.md)
 * Breakdown of core Leadership Principles prioritized for DCO (Customer Obsession, Ownership, Earn Trust, Dive Deep, Insist on Highest Standards, Bias for Action).
 * Strategic STAR method timing guidelines (Situation, Task, Action, Result).
 * Interviewer follow-up probe prep and story-mapping matrix.
