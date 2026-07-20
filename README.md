@@ -28,14 +28,14 @@ Click any module below to dive deep into specific study materials:
 * Interviewer follow-up probe prep and story-mapping matrix.
 * Printable STAR story drafting template.
 
-### 🛠️ 2. [Technical Deep-Dive & Hardware Cheat Sheet](docs/technical-cheatsheet.md)
+### 🛠️ 2. [Technical Deep-Dive & Hardware Cheat Sheet](technical-cheatsheet.md)
 * **Networking:** OSI Model (Layers 1–3), TCP vs. UDP, DHCP (DORA process), DNS.
 * **Server Hardware:** POST boot sequence, BMC/IPMI out-of-band management, ECC RAM, slot-vs-stick troubleshooting.
 * **Storage & RAID:** HDD vs. SATA/SAS SSD vs. NVMe, RAID 0, 1, 5, 6, and 10 breakdown.
 * **Fiber Optics:** Single-Mode (SMF) vs. Multi-Mode (MMF), LC/MPO connectors, transceivers (SFP, QSFP, OSFP), VFL lasers, and optical light meters.
 * **Linux CLI:** Essential network (`ip`, `ping`, `traceroute`, `dig`) and hardware (`lsblk`, `lspci`, `dmesg`, `journalctl`) diagnostic commands.
 
-### 🔀 3. [Advanced Troubleshooting Methodology & Flowcharts](docs/troubleshooting-flowcharts.md)
+### 🔀 3. [Advanced Troubleshooting Methodology & Flowcharts](troubleshooting-flowcharts.md)
 * **Visual Flowcharts (Mermaid.js):** Step-by-step logic for *Server Won't Power On / No POST* and *Network Link Down / Packet Loss*.
 * **Physical Isolation:** Minimum configuration testing ("bench testing") and fiber endface inspection/cleaning routines.
 * **The 90-Second Response Standard:** Framework for answering technical scenario questions concisely during interview loops.
