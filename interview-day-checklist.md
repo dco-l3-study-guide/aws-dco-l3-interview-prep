@@ -4,7 +4,7 @@ Use this quick-reference guide to make sure you are 100% prepared mentally and t
 
 ---
 
-## 🌅 Day Before the Interview
+## 🌅 Day Before the Interview 
 
 - [ ] **Finalize Your 5 STAR Stories:** Review your story matrix in `docs/lp-star-bank.md`. Make sure every story has a clear **Situation, Task, Action, and Result**.
 - [ ] **Memorize Your Metrics:** Ensure every STAR story includes hard numbers (e.g., *"reduced host offline time by 20 minutes," "0 dropped packets," "audited 40+ connections"*).
