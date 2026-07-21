@@ -8,7 +8,7 @@
 
 ### The OSI Model (Focus on Layers 1–3)
 
-| Layer | Name | Data Unit | Key Components & Concepts |
+| Layer | Name | Data Unit | Key Components & Concepts | 
 | :--- | :--- | :--- | :--- |
 | **Layer 1** | Physical | Bits | Fiber optics, CAT6 cables, transceivers (SFP/QSFP), power distribution (PDUs), rack units. |
 | **Layer 2** | Data Link | Frames | MAC addresses, switches, Top-of-Rack (ToR) switches, VLAN tagging, ARP, Ethernet frames. |
