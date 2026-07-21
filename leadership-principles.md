@@ -4,7 +4,7 @@ The behavioral component makes up **70–80% of the AWS DCO interview evaluation
 
 ---
 
-## 🎯 Priority Leadership Principles for Data Center Operations
+## 🎯 Priority Leadership Principles for Data Center Operations 
 
 While Amazon has 16 Leadership Principles, DCO panels focus most heavily on the principles listed below.
 
