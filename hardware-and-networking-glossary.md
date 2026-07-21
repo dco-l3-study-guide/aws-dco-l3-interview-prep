@@ -4,7 +4,7 @@ A quick-reference dictionary of essential data center terminology, hardware acro
 
 ---
 
-## 🧱 Hardware & Server Architecture
+## 🧱 Hardware & Server Architecture 
 
 * **BMC (Baseboard Management Controller):** A specialized service processor that monitors the physical state of the server (temperatures, voltages, fan speeds) independently of the main OS.
 * **ECC RAM (Error-Correcting Code Memory):** Specialized system memory that can detect and correct single-bit memory errors on the fly to prevent crashes.
