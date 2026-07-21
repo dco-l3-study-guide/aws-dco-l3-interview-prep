@@ -4,7 +4,7 @@
 
 ---
 
-## 🏗️ 1. Customer Obsession
+## 🏗️ 1. Customer Obsession 
 
 > **Interviewer Mindset:** *"Does this candidate prioritize rack availability, data integrity, and strict safety over cutting corners to close a ticket fast?"*
 
