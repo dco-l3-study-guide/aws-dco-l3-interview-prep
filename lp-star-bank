@@ -14,16 +14,10 @@
 * *"Give an example of how you minimized customer impact during a critical hardware maintenance window."*
 
 ### 📐 Story Architecture Blueprint
-```text
-[Situation] High-priority ticket assigned for host flap in production rack.
-   │
-[Task] Isolate fault without causing collateral downtime to adjacent dual-homed servers.
-   │
-[Action] Put on ESD strap ──► Verified B-feed power redundancy ──► Identified faulty SFP+ 
-         ──► Replaced optic using clean fiber procedure ──► Ran loopback test.
-   │
-[Result] Link stabilized with 0 dropped packets; host returned to pool in 18 minutes.
-```
+* **Situation:** High-priority ticket assigned for host flap in production rack.
+* **Task:** Isolate fault without causing collateral downtime to adjacent dual-homed servers.
+* **Action:** Put on ESD strap ➔ Verified B-feed power redundancy ➔ Identified faulty SFP+ ➔ Replaced optic using clean fiber procedure ➔ Ran loopback test.
+* **Result:** Link stabilized with 0 dropped packets; host returned to pool in 18 minutes.
 
 ### 💬 Real-World Interview Example
 > *"During a high-traffic period, an alarm flagged an enterprise host dropping packets intermittently. The shift manager asked if we could immediately pull and swap the Top-of-Rack network cable to save time. Recognizing that pulling the cable without checking active link aggregation could drop dual-homed traffic for 8 adjacent servers, I pushed back briefly to check the interface status via CLI first. I confirmed the secondary link was active, put on my ESD wrist strap, cleaned the replacement fiber optic ferrules with a click-cleaner, and performed the swap. The link stabilized with zero dropped packets, preventing a broader service impact."*
@@ -44,19 +38,13 @@
 * *"Give an example of how you used system logs (`dmesg`, IPMI SEL, switch interface counters) to isolate a transient issue."*
 
 ### 📐 Story Architecture Blueprint
-```text
-[Situation] Server experiencing sporadic, unexplained reboots every 48–72 hours.
-   │
-[Task] Determine if failure is software-driven, power-related, or a hardware defect.
-   │
-[Action] Checked IPMI SEL logs ──► Found correctable ECC memory errors on Slot B2 
-         ──► Performed Slot-vs-Stick RAM test ──► Confirmed fault followed the DIMM module.
-   │
-[Result] Replaced single bad DIMM stick; server achieved 100% uptime over 90-day observation window.
-```
+* **Situation:** Server experiencing sporadic, unexplained reboots every 48–72 hours.
+* **Task:** Determine if failure is software-driven, power-related, or a hardware defect.
+* **Action:** Checked IPMI SEL logs ➔ Found correctable ECC memory errors on Slot B2 ➔ Performed Slot-vs-Stick RAM test ➔ Confirmed fault followed the DIMM module.
+* **Result:** Replaced single bad DIMM stick; server achieved 100% uptime over 90-day observation window.
 
 ### 💬 Real-World Interview Example
-> *"I was assigned a ticket for a host that kept dropping off the network, but physical link lights remained green. Standard runbooks suggested replacing the network patch cable. Instead of blindly swapping hardware, I logged into the host out-of-band via BMC and ran `dmesg -T` and `ethtool -S eth0`. The interface counters revealed millions of CRC alignment errors, indicating optical degradation rather than a completely broken link. I inspected the fiber ferrule under a microscope, found severe oil contamination, cleaned it, and re-tested signal loss with an Optical Power Meter ($dBm$). Light levels returned to optimal specifications ($-3\text{ dBm}$), resolving the root cause permanently."*
+> *"I was assigned a ticket for a host that kept dropping off the network, but physical link lights remained green. Standard runbooks suggested replacing the network patch cable. Instead of blindly swapping hardware, I logged into the host out-of-band via BMC and ran `dmesg -T` and `ethtool -S eth0`. The interface counters revealed millions of CRC alignment errors, indicating optical degradation rather than a completely broken link. I inspected the fiber ferrule under a microscope, found severe oil contamination, cleaned it, and re-tested signal loss with an Optical Power Meter. Light levels returned to optimal specifications (-3 dBm), resolving the root cause permanently."*
 
 ### 🚩 Red Flags to Avoid
 * Accepting surface-level fixes (like rebooting a server repeatedly) without determining why it failed.
@@ -74,23 +62,13 @@
 * *"Give an example of how you improved a messy rack, unlabeled cable run, or inaccurate inventory system."*
 
 ### 📐 Story Architecture Blueprint
-```text
-[Situation] Discovered unlabeled fiber patch runs and disorganized power cables during a routine audit.
-   │
-[Task] Eliminate physical trace hazards and risk of accidental cable snags during hot-swaps.
-   │
-[Action] Documented port mappings ──► Scheduled off-peak maintenance window 
-         ──► Re-routed cables with proper bend radius ──► Applied standardized port labels.
-   │
-[Result] Improved technician audit time by 25% and eliminated physical snag hazards across 4 racks.
-```
+* **Situation:** Discovered unlabeled fiber patch runs and disorganized power cables during a routine audit.
+* **Task:** Eliminate physical trace hazards and risk of accidental cable snags during hot-swaps.
+* **Action:** Documented port mappings ➔ Scheduled off-peak maintenance window ➔ Re-routed cables with proper bend radius ➔ Applied standardized port labels.
+* **Result:** Improved technician audit time by 25% and eliminated physical snag hazards across 4 racks.
 
 ### 💬 Real-World Interview Example
 > *"While completing a routine drive replacement in Rack A04, I noticed a PDU power cable hanging loose across an air containment hot-aisle, posing a tripping and snag hazard for anyone servicing nearby chassis. Although it wasn't assigned to my queue, I traced the feed, verified it was supplying redundant B-feed power, and coordinated with the shift lead to re-route and secure the cable using proper Velcro ties. I then updated the rack elevation documentation in our inventory tracking system so future technicians had an accurate physical map."*
-
-### 🚩 Red Flags to Avoid
-* Leaving a hazard or dirty workspace behind because "it wasn't in my ticket description."
-* Passing the blame to previous shift technicians without taking steps to resolve the underlying issue.
 
 ---
 
@@ -103,24 +81,12 @@
 * *"Tell me about an instance where you identified a potential hardware failure before a system monitor alerted."*
 * *"How do you prioritize your work queue when multiple critical tickets hit simultaneously?"*
 
-### 📐 Story Architecture Blueprint
-```text
-[Situation] Multiple host-down alarms triggered across two distinct racks simultaneously.
-   │
-[Task] Swiftly categorize whether this is a localized host issue or a multi-host power/network event.
-   │
-[Action] Evaluated PDU status indicators ──► Identified single phase drop 
-         ──► Safely shifted priority to facilities escalation ──► Prevented unnecessary host teardowns.
-   │
-[Result] Restored power infrastructure within 12 minutes, minimizing downtime across 12 hosts.
-```
-
 ### 💬 Real-World Interview Example
 > *"During a night shift, two separate alarms fired at the exact same time: a single storage host drive failure and an ambient thermal warning in Row 3. Recognizing that thermal events pose an immediate threat to an entire row of production servers while a single RAID drive failure is non-disruptive due to parity redundancy, I immediately prioritized the thermal issue. I surveyed the row, identified a blocked airflow damper in the containment aisle, and cleared it. Room temperatures stabilized within 5 minutes, preventing thermal throttling across 40+ servers before I returned to process the drive replacement."*
 
 ### 🧠 Two-Way Door vs. One-Way Door Framework
-* **Two-Way Door (Reversible Decision):** Swapping a patch cable, testing a spare optical transceiver, or reseating a RAM stick. $\rightarrow$ *Execute with high urgency and speed.*
-* **One-Way Door (Irreversible Decision):** Power-cycling a core switch, wiping RAID arrays, or unseating main power feeds. $\rightarrow$ *Stop, verify scope, check redundancy, and confirm authorization.*
+* **Two-Way Door (Reversible Decision):** Swapping a patch cable, testing a spare optical transceiver, or reseating a RAM stick. ➔ *Execute with high urgency and speed.*
+* **One-Way Door (Irreversible Decision):** Power-cycling a core switch, wiping RAID arrays, or unseating main power feeds. ➔ *Stop, verify scope, check redundancy, and confirm authorization.*
 
 ---
 
@@ -133,13 +99,11 @@
 * *"Describe a situation where you caught a mistake made by a colleague or runbook documentation."*
 
 ### 💬 Real-World Interview Example
-> *"I was performing a motherboard replacement on a high-density compute node. After completing the swap, I noticed that the thermal paste application on the heat sink looked uneven and slightly dried out from a previous installation attempt. Although re-cleaning and re-applying compound would delay the ticket by 15 minutes during a busy shift, I refused to re-install a substandard thermal interface. I cleaned the CPU lid with isopropyl alcohol, applied fresh thermal paste in a proper pattern, and torqued the heatsink to spec. The server passed stress testing with CPU temperatures operating $8^\circ\text{C}$ cooler than baseline averages."*
+> *"I was performing a motherboard replacement on a high-density compute node. After completing the swap, I noticed that the thermal paste application on the heat sink looked uneven and slightly dried out from a previous installation attempt. Although re-cleaning and re-applying compound would delay the ticket by 15 minutes during a busy shift, I refused to re-install a substandard thermal interface. I cleaned the CPU lid with isopropyl alcohol, applied fresh thermal paste in a proper pattern, and torqued the heatsink to spec. The server passed stress testing with CPU temperatures operating 8°C cooler than baseline averages."*
 
 ---
 
 ## 📊 Quick-Reference STAR Story Mapping Matrix
-
-Use this grid to balance your interview stories across both technical skill and leadership values:
 
 | Past Work / Project Experience | Primary LP | Secondary LP | Key Technical Artifacts Included |
 | :--- | :--- | :--- | :--- |
